@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ama's Plant Corner is a neighbourhood plant shop at 14 Okaishie Lane, Accra, selling houseplants, pots and soil, with friendly advice.">
+    <title>Ama's Plant Corner | Plant Shop In Accra</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+
+
+  <body>
+    <header id="header">
+      <a id="logo" href="#hero">Ama's Plant Corner</a>
+      <nav id="nav">
+        <ul>
+          <li><a href="#what-we-sell">What we sell</a></li>
+          <li><a href="#plant-care">Plant care</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="hero">
+          <h1>Welcome to Ama's Plant Corner!</h1>
+          <p>Houseplants, pots and soil, with  friendly advice on keeping them alive</p>
+          <a href="#what-we-sell" class="btn">See what we sell</a>
+      </section>
+      <section id="find-us">
+        <h2>Find Us</h2>
+          <address>
+            14 Okaishie Lane, Accra, Ghana<br>
+            <a href="tel:+233244000000">Call 0244 000 000</a>
+          </address>
+          <p>Open Monday to Saturday , 8:00am to 6:00pm.  Closed on Sundays.</p>
+          <p>Follow us: <a href="#">Facebook</a> . <a href="#">Instagram</a></p>
+      </section>
+
+
+      <section id="what-we-sell">
+
+        <h2>What We Sell</h2>
+        <p>We carry a wide variety of plants for your home and office. Whether you are a first-time plant owner or an experienced gardener, we have something for you. Come visit us in the shop!</p>
+
+        <div class="products">
+          <div class="product-item">
+            <img src="css/assets/images/houseplant.jpg" alt="Selection of houseplants" width="180" height="120" loading="lazy">
+            <h3>Houseplants</h3>
+            <p>Starting from GH&#8373; 25</p>
+          </div>
+          <div class="product-item">
+            <img src="css/assets/images/pots.jpg" alt="Pots and planters" width="180" height="120" loading="lazy">
+            <h3>Pots &amp; Planters</h3>
+            <p>Starting from GH&#8373; 15</p>
+          </div>
+          <div class="product-item">
+            <img src="css/assets/images/soil.jpg" alt="Soil and plant accessories" width="180" height="120" loading="lazy">
+            <h3>Soil &amp; Accessories</h3>
+            <p>Starting from GH&#8373; 10</p>
+          </div>
+        </div>
+
+      </section>
+      <section id="about">
+        <h2>About Ama</h2>
+        <p>Ama has been running her plant shop in the neighbourhood for over 5 years now. She loves plants and wants to help everyone keep their plants alive and thriving. If you are not sure what plant is right for you, just ask her!</p>
+
+      </section>
+        <div class="two-col">
+            <section id="plant-care">
+              <h2>Plant Care Tips</h2>
+              <p>Click on a topic below to read the care guide for that type of plant.</p>
+              <div class="care-guides">
+                <details class="guide-item">
+                  <summary class="guide-trigger">Houseplants</summary>
+                  <div class="guide-body">
+                    <p>Most houseplants prefer indirect sunlight and do well near a window that does not get direct afternoon sun. Water when the top inch of soil feels dry, usually every 5 to 7 days. Avoid leaving them in standing water as this causes root rot.</p>
+                  </div>
+                </details>
+
+                <details class="guide-item">
+                  <summary class="guide-trigger">Succulents &amp; Cacti</summary>
+                  <div class="guide-body">
+                    <p>Succulents and cacti store water in their leaves and stems, so they need very little watering. Water deeply once every two to three weeks and let the soil dry out completely between waterings. They love bright, direct sunlight.</p>
+                  </div>
+                </details>
+
+                <details class="guide-item">
+                  <summary class="guide-trigger">Tropical Plants</summary>
+                  <div class="guide-body">
+                    <p>Tropical plants like high humidity and warm temperatures. Mist the leaves regularly or place a tray of water near the plant to keep moisture in the air. Keep away from cold drafts and air conditioning vents.</p>
+                  </div>
+                </details>
+
+                <details class="guide-item">
+                  <summary class="guide-trigger">Outdoor Plants</summary>
+                  <div class="guide-body">
+                    <p>Outdoor plants need regular watering, especially in the dry season. Water in the early morning or late evening to reduce evaporation. Feed with a general-purpose fertiliser every four to six weeks during the growing season.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+            
+            <section id="ask-ama">
+              <h2>Ask Ama</h2>
+              <p>Have a question about a plant? Call us on 0244 000 000 , or ask Ama in the shop</p>
+
+              <div class="inquiry-section">
+                <form class="form">
+                  <label for="name">Enter your name: </label>
+                  <input type="text" placeholder="Your name" class="form-field" id="name">
+                  <label  for="question">Enter your question:</label>
+                  <textarea placeholder="Your question" class="form-field" id="question"></textarea>
+                  <button type="submit"  class="form-submit">Submit</button>
+                </form>
+              </div>
+            </section>
+          </div>
+
+        <section id="contact">
+          <h2>Get In Touch</h2>
+          <p>Leave your name,  phone number and a message for Ama</p>
+
+          <form class="form">
+            <label for="fullName">Full name</label>
+            <input type="text" placeholder="Full name" class="form-field" id="fullName" name="fullName" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" placeholder="Phone number" class="form-field" id="phone" name="phone" required>
+            <label for="message">Your message  :</label>
+            <textarea placeholder="Your message" class="form-field" id="message" name="message"  required></textarea>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+        </section>
+    </main>
+    <footer id="footer">
+      <p>Copyright &copy; 2026 Ama's Plant Corner. All rights reserved.</p>
+    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/233244000000?text=Hello%20Ama,%20I'm%20interested%20in%20your%20plants."
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Ama on WhatsApp"
+    >
+      WhatsApp Us
+    </a>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
