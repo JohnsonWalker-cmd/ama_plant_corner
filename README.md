@@ -27,4 +27,49 @@
     - Root cause: the three image files the HTML points to don’t exist. Nothing handles that failure: every image has alt="image", so no description or label replaces the missing photo, and the CSS gives the images a grey background (
 #cccccc), which makes the gap look like a design choice.
     - Why it matters: a plant shop with no plants shown, and nothing saying what each box was meant to be, looks abandoned. A visitor can’t tell what Ama sells, which is the question the page exists to answer.
-     
+  
+## Short audit of the site
+#### Phone readability and layout ( Highest priority)
+   -What  I did : I added a meta tag with a name attribute whose value if viewport , so it resizable at different screen sizes . I wrote a rule for the desktop screen size (@media ( min-width:  48rem) ) so the web page can also fit desktop screens
+- Why this first: the brief addressed the fact that Ama's customer's couldn't read the text on phones . The root cause no viewport tag and fixed width so the page shrank  as a desktop page on phones
+- The website is  now responsive , on both mobile and  desktop
+
+#### Walk-in information and page order
+- What I did: put Find Us directly under the hero, with the address, hours and a tap-to-call link, and changed the hero button to “See what we sell”.
+- Why: a nearby customer decides from the first screens. The cost is that products sit slightly lower, which I accepted deliberately.
+
+#### Semantic HTML
+**What I did**
+- One `<h1>`, then `<h2>` and `<h3>` in order, with no skipped levels.
+- Landmarks: `<header>`, `<nav>`, `<main>`, `<section>`s and `<footer>`.
+- The care guides use `<details>` and `<summary>`, so they open and close without JavaScript and work from the keyboard.
+- `<address>` holds the contact details, and nav links point to real section IDs.
+- The contact section now sits inside `<main>`
+
+**Why**
+The old page was built from `<div>`s, had no landmarks, and left the contact section outside the layout. Landmarks give screen-reader and keyboard users a map of the page, and `<details>` makes "click a topic" actually work without scripts.
+ 
+### Visual consistency
+**What I did**
+- Every colour, font size and space comes from a CSS variable in `:root`.
+- **Palette:** warm cream background, leaf green as the primary colour, and terracotta (a pot colour) as a sparing accent for the main call to action.
+- **Type scale:** one 1.25× ratio (1, 1.25, 1.56 and 1.953rem), with Georgia for headings and the system font for body text. System fonts mean nothing loads from outside, which suits slow phone connections.
+- **Spacing:** a 4px grid from 0.25rem to 4rem. Small steps sit inside components, and large steps sit between sections.
+- Cards, forms and buttons share one pattern: the same border, radius and padding.
+
+**Why**
+Ama wants the site to feel like her shop: calm, and not "anybody's website". The old file used unrelated blues, greens and oranges chosen without a system. One set of tokens makes every choice traceable to the brief.
+ 
+---
+## What I left open
+
+I am listing these so the limits are clear.
+ 
+- **The forms are front-end only.** There is no `action` and no script, so neither form can send a message to Ama yet. Sending needs behaviour added later.
+- **Product photos are stand-ins.** They are stock photos from [source and licence], and should be replaced with photos of Ama's actual stock.
+- **Placeholders:** the phone number (0244 000 000) and the Facebook and Instagram links.
+- **About Ama has no photo.** A stock portrait would imply a real person, which works against "trustworthy".
+
+## One improvement
+I included a floating whatsapp button , where the customers can chat Ama is they don't want to call or send the message through the site.
+The whatsApp button is an easy to way to reach Ama , which reduces friction , after seeing a plant you can  just tap on it and it takes you to a prefilled message "Hey I'm lokking for this plant.."
