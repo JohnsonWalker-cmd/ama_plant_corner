@@ -1,4 +1,5 @@
 # ama_plant_corner
+[Live site](https://johnsonwalker-cmd.github.io/ama_plant_corner/)
 ## Sketch 
 <img width="765" height="1020" alt="updated001" src="https://github.com/user-attachments/assets/0ed14fb0-a0ce-4fb5-b4a2-eb7f1763b54f" />
 <img width="765" height="1020" alt="updated002" src="https://github.com/user-attachments/assets/badd6dfc-1cc6-401e-83ab-c41f2938beed" />
