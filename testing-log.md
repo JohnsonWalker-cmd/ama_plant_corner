@@ -1,1 +1,62 @@
-## testing log
+# EE02 Accessibility Testing Log
+
+**Website tested:** [Ama's Plant Corner — Partner's website](https://halledotse22.github.io/amas_plant_corner/)  
+**Testing tools:** WAVE, Google Chrome, Chrome DevTools and Windows Narrator  
+**Date:** 19 November 2026
+
+This log records the accessibility checks performed, what was observed and the outcome. It is evidence for the formal audit; it does not by itself establish full WCAG conformance.
+
+## 1. Automated testing
+
+| Page / section | Tool | Finding / observation | Result |
+|---|---|---|---|
+| Homepage | WAVE | 0 automatically detected errors. | No automated errors detected. |
+| Homepage — Find Us section | WAVE + Windows Narrator | WAVE flagged a contrast error on a visually hidden `<h2>`. Narrator announced, “Heading level 2, Find us.” | Investigated; not confirmed as a contrast failure. |
+| Homepage — Header and Find Us section | WAVE + HTML inspection | WAVE flagged two telephone links with the same destination. One appears in the header and the other in the Find Us section. | Investigated; repeated call actions in different sections. No confirmed accessibility barrier. |
+| Homepage | WAVE | Five alternative-text features were detected. | Presence detected; the quality of every description was not verified. |
+| Homepage — Ask Ama form | WAVE + keyboard testing | Three form-label features were detected. Manual testing confirmed that each input field has a visible label. | Verified; passed initial checks. |
+| Homepage | WAVE + keyboard testing | A skip link and its target were detected. Pressing Enter on the skip link moved directly to the main content. | Verified; passed. |
+| Homepage | WAVE | 21 structural elements and 8 ARIA items were detected. | Detection recorded; structure and ARIA quality require manual review. |
+
+## 2. Manual testing — keyboard and screen reader
+
+| Page / section | What I tested | What happened | Result |
+|---|---|---|---|
+| Header — Ama's Plant Corner | Keyboard | Focused the site title and pressed Enter. The URL changed to `#top` and the page moved to the top. | Working as expected. |
+| Header navigation — Shop | Keyboard | A visible focus outline appeared. Pressing Enter navigated to the “What Ama sells” section. | Passed. |
+| Header navigation | Keyboard | Tested Shop, Care Tips, Ask Ama and Call using Tab and Enter. Links navigated to their respective sections; Call opened the calling application. | Passed. |
+| Shop — product images | Keyboard | Pressing Tab skipped the non-interactive product images and moved to Care Tips. | Expected behaviour; ordinary non-interactive images do not need keyboard focus. |
+| Shop — first product card | Windows Narrator | Narrator announced the image as a graphic, read its alternative text, announced the product title as a level-three heading and read the price. | Passed for the tested product card. |
+| Plant Care — expandable tips | Keyboard | Each plant-care tip received visible focus. Enter expanded it; pressing Enter again collapsed it. | Passed. |
+| Ask Ama form | Keyboard | All input fields were reachable using Tab. Each had a visible label, and the Submit button was keyboard-accessible. | Passed initial checks. |
+| Ask Ama form — empty submission | Keyboard + screen reader | Submitting the empty form triggered the browser's native “Please fill out this field” tooltip. Narrator did not announce the tooltip. When focus returned to the field, Narrator announced, “Your name, edit, required.” | Native validation detected; screen-reader announcement of the tooltip was not confirmed. No WCAG failure confirmed. |
+| Ask Ama form — successful submission attempt | Keyboard + manual testing | Completed all required fields and submitted. The page reloaded, but no success or confirmation message appeared. The form uses `action="#ask-ama"` and `method="get"`. | Functional/usability limitation; no WCAG failure confirmed. |
+| WhatsApp contact link | Keyboard | The link received visible focus. Pressing Enter redirected to WhatsApp. | Passed. |
+| Footer — social links | HTML inspection + keyboard | Facebook and Instagram links had accessible names, but both used `href="#"` rather than their actual social-media destinations. Narrator announced “link, Facebook” and “link, Instagram.” | Functional issue; no WCAG failure confirmed. |
+| Entire page — keyboard focus | Keyboard | Navigated through the page and checked focused elements around the sticky header. Focus was not obscured. | Passed for the tested elements. |
+| Homepage — skip to main content | Keyboard | The first Tab stop revealed a visible skip link. Pressing Enter moved directly to the main content. | Passed. |
+
+## 3. Zoom, reflow and touch-target testing
+
+| Page / section | What I tested | What happened | Result |
+|---|---|---|---|
+| Entire page — 200% zoom | Browser zoom | Increased browser zoom to 200% and inspected the page. No overlapping text was observed, and the page content remained readable. | Passed visual inspection. |
+| Entire page — 400% zoom | Browser zoom | The page reflowed into a single column and scrolled vertically without horizontal scrolling. No obvious clipping or overlapping was observed. | Passed visual inspection. |
+| Header and Ask Ama form — interactive controls | Chrome DevTools | Measured: Menu 66.7 × 48 CSS px; Call 63 × 48 CSS px; plant-care control 155 × 25 CSS px; Send question 294 × 48 CSS px. | All measured controls meet the general 24 × 24 CSS px minimum dimensions. |
+| Plant-care guides — interactive controls | Chrome DevTools + visual inspection | The plant-care control measured 155 × 25 CSS px. Controls had sufficient visible spacing; tapping one did not activate another. | Passed. |
+
+## 4. Notes and limitations
+
+- Screen-reader testing was performed with Windows Narrator.
+- The product-card screen-reader check focused on the first product card; other cards were not individually verified.
+- WAVE detected the presence of alternative-text features, but the quality of every alternative-text description was not verified.
+- Zoom and reflow results are based on visual inspection at the tested zoom levels.
+- Only selected interactive controls were measured for target size.
+- The form's actual delivery of submitted questions to Ama could not be verified.
+- These checks do not establish complete WCAG 2.2 conformance.
+
+## 5. Overall testing summary
+
+The tests found several positive accessibility features: a working skip link, keyboard-operable navigation and expandable plant-care guides, visible focus on tested controls, screen-reader access to the tested product information, and a layout that remained usable during the tested zoom and reflow checks.
+
+Two functional limitations were recorded: the Ask Ama form did not display a submission confirmation, and the Facebook and Instagram links used placeholder destinations. Neither was established as a WCAG failure during this testing.
