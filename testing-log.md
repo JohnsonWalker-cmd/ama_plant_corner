@@ -1,6 +1,6 @@
 # EE02 Accessibility Testing Log
 
-**Website tested:** [Ama's Plant Corner — Partner's website](https://halledotse22.github.io/amas_plant_corner/)  
+**Website tested:** [Ama's Plant Corner — Halle's website](https://halledotse22.github.io/amas_plant_corner/)  
 **Testing tools:** WAVE, Google Chrome, Chrome DevTools and Windows Narrator  
 **Date:** 19 November 2026
 
