@@ -31,7 +31,7 @@
   
 ## Short audit of the site
 #### Phone readability and layout ( Highest priority)
-   -What  I did : I added a meta tag with a name attribute whose value if viewport , so it resizable at different screen sizes . I wrote a rule for the desktop screen size (@media ( min-width:  48rem) ) so the web page can also fit desktop screens
+   -What  I did : The viewport meta tag sets the page width to match the device's screen width and allows the browser to apply the appropriate initial zoom level. . I wrote a rule for the desktop screen size (@media ( min-width:  48rem) ) so the web page can also fit desktop screens
 - Why this first: the brief addressed the fact that Ama's customer's couldn't read the text on phones . The root cause no viewport tag and fixed width so the page shrank  as a desktop page on phones
 - The website is  now responsive , on both mobile and  desktop
 
@@ -67,12 +67,12 @@ Ama wants the site to feel like her shop: calm, and not "anybody's website". The
 I am listing these so the limits are clear.
  
 - **The forms are front-end only.** There is no `action` and no script, so neither form can send a message to Ama yet. Sending needs behaviour added later.
-- **Product photos are stand-ins.** They are stock photos from [source and licence], and should be replaced with photos of Ama's actual stock.
+- **Product photos are stand-ins.** The product images are illustrative photographs used to represent the plants. Their original sources and licences should be verified before public or commercial reuse.
 - **Placeholders:** the phone number (0244 000 000) and the Facebook and Instagram links.
 - **About Ama has no photo.** A stock portrait would imply a real person, which works against "trustworthy".
 
 ## One improvement
-I included a floating whatsapp button , where the customers can chat Ama is they don't want to call or send the message through the site.
+I included a WhatsApp contact link , where the customers can chat Ama is they don't want to call or send the message through the site.
 The whatsApp button is an easy to way to reach Ama , which reduces friction , after seeing a plant you can  just tap on it and it takes you to a prefilled message "Hey I'm lokking for this plant.."
 
 

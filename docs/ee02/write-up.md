@@ -76,7 +76,7 @@
 
 **Reason not fully fixed:** This project is implemented using HTML and CSS and does not have a working form-processing service. Adding a success message without actually submitting the information would mislead visitors. A complete solution requires a submission mechanism that can receive the information and provide meaningful confirmation or error feedback.
 
-**Future improvement:** Connect the forms to a suitable submission service and provide clear feedback after submission.
+** Possible Future Enhancements:** Connect the forms to a suitable submission service and provide clear feedback after submission.
 
 ### Finding 6: Facebook and Instagram links use placeholder destinations
 

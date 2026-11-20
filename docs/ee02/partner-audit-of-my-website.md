@@ -18,13 +18,13 @@
 
 The site has a sound structure: clear headings, proper landmarks, labelled form fields, a visible focus outline and care guides that work with the keyboard. It holds together under browser zoom at 200% and 400%.
 
-It breaks in the one situation the brief describes. When a customer makes the text larger on her phone, the floating WhatsApp button grows to cover about a quarter of the screen and hides a menu link, the address and the Call link, and the headline and product cards run off the side of the screen. The same button has white text that is very hard to read on its bright green background. Both automated tools rated the site highly (WAVE 9.4 out of 10, Lighthouse 96) and missed the two most serious problems; I found them by enlarging the text on a real phone.
+It breaks in the one situation the brief describes. When a customer makes the text larger on her phone, the WhatsApp contact link grows to cover about a quarter of the screen and hides a menu link, the address and the Call link, and the headline and product cards run off the side of the screen. The same button has white text that is very hard to read on its bright green background. Both automated tools rated the site highly (WAVE 9.4 out of 10, Lighthouse 96) and missed the two most serious problems; I found them by enlarging the text on a real phone.
 
 In order, the problems to fix are: the WhatsApp button covering content, content running off the screen at larger text, the button's contrast, its spoken name, and the forms that do not tell people what happened.
 
 ## Findings, in priority order
 
-### 1. With larger text on a phone, the floating WhatsApp button grows to cover a quarter of the screen and hides links and text
+### 1. With larger text on a phone, the WhatsApp contact link grows to cover a quarter of the screen and hides links and text
 
 - **Where:** the green "WhatsApp Us" button fixed to the bottom right of the screen, on every part of the page.
 - **What happens:** the button stays in place while the page scrolls under it, so it is always on top of something. On my iPhone 14 with larger text, it grew to about a quarter of the screen, its label wrapped onto two lines, and it spilled off the left edge. In that state it hid the "Plant care" link in the menu, part of the headline, the address and Call link in Find Us, and lines of the About Ama text. With normal text it is smaller but still sits over content at every size I tested (320px wide, larger text, and 200%, 400% and 500% zoom). At the very bottom of the page it permanently hides part of the copyright line, because there is nothing left to scroll.
