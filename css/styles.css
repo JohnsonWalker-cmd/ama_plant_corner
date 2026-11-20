@@ -211,6 +211,14 @@ main{
 }
 .guide-body  p{
   margin: 0;
+  margin-bottom: var(--spacing-3);
+  line-height: 1.7;
+}
+.guide-body p:last-child{
+  margin-bottom: 0;
+}
+.guide-body strong{
+  color: var(--color-primary)
 }
 .form{
   display: grid;
