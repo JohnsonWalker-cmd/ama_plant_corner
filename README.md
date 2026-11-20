@@ -73,7 +73,7 @@ I am listing these so the limits are clear.
 
 ## One improvement
 I included a WhatsApp contact link , where the customers can chat Ama is they don't want to call or send the message through the site.
-The whatsApp button is an easy to way to reach Ama , which reduces friction , after seeing a plant you can  just tap on it and it takes you to a prefilled message "Hey I'm lokking for this plant.."
+The whatsApp button is an easy to way to reach Ama , which reduces friction , after seeing a plant you can  just tap on it and it takes you to a prefilled message "Hey I'm looking for this plant.."
 
 
 ## Some fixes to make after live review
