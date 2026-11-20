@@ -10,6 +10,7 @@
 
 
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header id="header">
       <a id="logo" href="#hero">Ama's Plant Corner</a>
       <nav id="nav">
@@ -35,7 +36,7 @@
             <a href="tel:+233244000000">Call 0244 000 000</a>
           </address>
           <p>Open Monday to Saturday , 8:00am to 6:00pm.  Closed on Sundays.</p>
-          <p>Follow us: <a href="#">Facebook</a> . <a href="#">Instagram</a></p>
+          <p>Follow us: <a href="https://www.facebook.com/search/top?q=Ama%27s%20Plant%20Corner" target="_blank">Facebook</a> . <a href="https://www.instagram.com/explore/search/keyword/?q=Ama%27s%20Plant%20Corner" target="_blank">Instagram</a></p>
       </section>
 
 
@@ -110,7 +111,7 @@
               <div class="inquiry-section">
                 <form class="form">
                   <label for="name">Enter your name: </label>
-                  <input type="text" placeholder="Your name" class="form-field" id="name">
+                  <input type="text" placeholder="Your name" class="form-field" id="name" name="name" autocomplete="name">
                   <label  for="question">Enter your question:</label>
                   <textarea placeholder="Your question" class="form-field" id="question"></textarea>
                   <button type="submit"  class="form-submit">Submit</button>
@@ -125,28 +126,28 @@
 
           <form class="form">
             <label for="fullName">Full name</label>
-            <input type="text" placeholder="Full name" class="form-field" id="fullName" name="fullName" required>
+            <input type="text" placeholder="Full name" class="form-field" id="fullName" name="fullName" required autocomplete="name">
             <label for="phone">Phone Number:</label>
-            <input type="tel" placeholder="Phone number" class="form-field" id="phone" name="phone" required>
+            <input type="tel" placeholder="Phone number" class="form-field" id="phone" name="phone" required autocomplete="tel">
             <label for="message">Your message  :</label>
             <textarea placeholder="Your message" class="form-field" id="message" name="message"  required></textarea>
             <button type="submit" class="form-submit">Send Message</button>
           </form>
+          <!-- WhatsApp Floating Button -->
+          <a
+            href="https://wa.me/233244000000?text=Hello%20Ama,%20I'm%20interested%20in%20your%20plants."
+            class="whatsapp-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp Us
+          </a>
         </section>
     </main>
     <footer id="footer">
       <p>Copyright &copy; 2026 Ama's Plant Corner. All rights reserved.</p>
     </footer>
-    <!-- WhatsApp Floating Button -->
-    <a
-      href="https://wa.me/233244000000?text=Hello%20Ama,%20I'm%20interested%20in%20your%20plants."
-      class="whatsapp-button"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with Ama on WhatsApp"
-    >
-      WhatsApp Us
-    </a>
+    
 
     <script src="js/script.js"></script>
   </body>
