@@ -11,6 +11,7 @@
 **Problem identified:** The WhatsApp button was fixed to the bottom-right of the viewport. When text was enlarged, the button grew and covered page content, including parts of the footer.
 
 **Changes made:**
+
 - Moved the WhatsApp link into the Contact section, after the Get In Touch form.
 - Changed its positioning from `fixed` to `static`.
 - Removed the fixed-positioning properties that caused it to overlay content.
@@ -26,6 +27,7 @@
 **Problem identified:** At larger text sizes, the hero headline could extend beyond its available space and the product cards could cause horizontal overflow on a narrow screen.
 
 **Changes made:**
+
 - Added `overflow-wrap: anywhere` to the `h1` styling.
 - Updated the product grid to use `grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));`.
 
@@ -40,6 +42,7 @@
 **Problem identified:** The original white WhatsApp button text on the bright green background did not provide sufficient contrast for normal-sized text.
 
 **Changes made:**
+
 - Changed the button background to `#2F5D3A`.
 - Changed the hover background to `#24472C`.
 - Explicitly kept the hover text colour white with `color: #FFFFFF`, preventing the global `a:hover` rule from making the text difficult to see.
@@ -99,6 +102,7 @@
 **Problem identified:** The name and phone fields did not have appropriate autocomplete attributes to identify their input purposes.
 
 **Changes made:**
+
 - Added `autocomplete="name"` to the Ask Ama name field.
 - Added `autocomplete="name"` to the Get In Touch name field.
 - Added `autocomplete="tel"` to the Get In Touch phone field.
@@ -116,6 +120,7 @@
 **Problem identified:** The page did not provide a skip link to allow keyboard users to bypass repeated navigation and move directly to the main content.
 
 **Changes made:**
+
 - Added a “Skip to main content” link immediately after the opening `<body>` tag.
 - Set its destination to `#main`, matching the ID on the `<main>` element.
 - Styled the link to remain off-screen until it receives keyboard focus.
@@ -127,7 +132,6 @@
 **Testing:** Pressed Tab to reveal the skip link and Enter to activate it. Confirmed that it navigates to the main content.
 
 **Additional change:** The WhatsApp link was moved inside the Contact section, which is within the main content landmark.
-
 
 ## Additional Improvement: Making Plant-Care Information Easier to Read for People with Dyslexia
 
@@ -144,6 +148,7 @@ I also adjusted the spacing between paragraphs to improve readability.
 **Who benefits:** People with dyslexia and other users who find long blocks of text difficult to follow.
 
 **Testing performed:**
+
 - Confirmed that all four plant-care guides expand and collapse correctly.
 - Checked that the instructions and labels are easy to identify.
 - Tested readability on a narrow mobile screen.
@@ -153,7 +158,6 @@ I also adjusted the spacing between paragraphs to improve readability.
 **Result:** All tests passed.
 
 **Justification:** This improvement goes beyond the eight findings in my partner's audit. It addresses the readability and organisation of plant-care information for a user group whose needs were not specifically considered in that audit.
-
 
 ## Additional testing
 

@@ -36,12 +36,12 @@ cannot identify every accessibility barrier.
 WAVE was used to evaluate the website's structure and identify potential
 accessibility issues, including:
 
--   Missing or problematic alternative text.
--   Colour contrast.
--   Form labels.
--   Page structure and landmarks.
--   ARIA attributes.
--   Potentially redundant links.
+- Missing or problematic alternative text.
+- Colour contrast.
+- Form labels.
+- Page structure and landmarks.
+- ARIA attributes.
+- Potentially redundant links.
 
 ### 3.2 Manual Keyboard Testing
 
@@ -49,13 +49,13 @@ The website was tested without relying on a mouse.
 
 The following keyboard interactions were examined:
 
--   Tab and Shift + Tab navigation.
--   Enter key activation.
--   Visible focus indicators.
--   Skip-link functionality.
--   Expandable plant-care sections.
--   Form fields and submission controls.
--   Footer and contact links.
+- Tab and Shift + Tab navigation.
+- Enter key activation.
+- Visible focus indicators.
+- Skip-link functionality.
+- Expandable plant-care sections.
+- Form fields and submission controls.
+- Footer and contact links.
 
 ### 3.3 Screen-Reader Testing
 
@@ -70,11 +70,11 @@ Ask Ama form.
 
 The website was examined at 200% and 400% browser zoom to identify:
 
--   Overlapping text.
--   Clipped content.
--   Layout problems.
--   Horizontal scrolling.
--   Content that becomes difficult to access.
+- Overlapping text.
+- Clipped content.
+- Layout problems.
+- Horizontal scrolling.
+- Content that becomes difficult to access.
 
 ### 3.5 Touch-Target Testing
 
@@ -86,15 +86,17 @@ minimum target size in WCAG 2.2 Success Criterion 2.5.8.
 
 The initial WAVE evaluation reported:
 
-  WAVE category           Result
-  --------------------- --------
-  Errors                       0
-  Contrast errors              1
-  Alerts                       1
-  Features                    11
-  Structural elements         21
-  ARIA items                   8
-  AIM score               9.7/10
+WAVE category Result
+
+---
+
+Errors 0
+Contrast errors 1
+Alerts 1
+Features 11
+Structural elements 21
+ARIA items 8
+AIM score 9.7/10
 
 ### 4.1 Investigation of the Contrast Warning
 
@@ -132,15 +134,15 @@ intentional. No confirmed accessibility barrier was identified.
 
 WAVE identified:
 
--   Five alternative-text features.
--   Three form-label features.
--   One skip link and its target.
--   One level-one heading.
--   Five level-two headings.
--   Seven level-three headings.
--   Four unordered lists.
--   Header, navigation, main-content and footer landmarks.
--   Eight ARIA items.
+- Five alternative-text features.
+- Three form-label features.
+- One skip link and its target.
+- One level-one heading.
+- Five level-two headings.
+- Seven level-three headings.
+- Four unordered lists.
+- Header, navigation, main-content and footer landmarks.
+- Eight ARIA items.
 
 Manual testing further confirmed that the form fields had visible labels
 and that the skip link worked.
@@ -191,10 +193,10 @@ Windows Narrator was then used to examine the first product card.
 
 It announced:
 
--   The image as a graphic.
--   The image's alternative text.
--   The product title as a level-three heading.
--   The product price.
+- The image as a graphic.
+- The image's alternative text.
+- The product title as a level-three heading.
+- The product price.
 
 This allowed screen-reader users to access the product information
 without needing the image itself to receive keyboard focus.
@@ -287,12 +289,14 @@ verification of every condition covered by both criteria.
 
 Chrome DevTools was used to measure selected interactive controls.
 
-  Interactive control            Width      Height
-  ---------------------- ------------- -----------
-  Menu button              66.7 CSS px   48 CSS px
-  Call button                63 CSS px   48 CSS px
-  Plant-care control        155 CSS px   25 CSS px
-  Send question button      294 CSS px   48 CSS px
+Interactive control Width Height
+
+---
+
+Menu button 66.7 CSS px 48 CSS px
+Call button 63 CSS px 48 CSS px
+Plant-care control 155 CSS px 25 CSS px
+Send question button 294 CSS px 48 CSS px
 
 All measured controls exceeded the general 24 × 24 CSS pixel minimum.
 
@@ -399,18 +403,18 @@ described above.
 
 The following limitations should be considered:
 
--   Screen-reader testing was performed using Windows Narrator, not
-    every available screen reader.
--   The product-card screen-reader test focused on the first product
-    card rather than every product.
--   The quality of every alternative-text description was not
-    independently verified.
--   Browser zoom and reflow checks were visual inspections under the
-    tested conditions.
--   Only selected interactive controls were measured for target size.
--   The actual delivery of questions submitted through the Ask Ama form
-    could not be verified.
--   The audit did not establish complete WCAG 2.2 conformance.
+- Screen-reader testing was performed using Windows Narrator, not
+  every available screen reader.
+- The product-card screen-reader test focused on the first product
+  card rather than every product.
+- The quality of every alternative-text description was not
+  independently verified.
+- Browser zoom and reflow checks were visual inspections under the
+  tested conditions.
+- Only selected interactive controls were measured for target size.
+- The actual delivery of questions submitted through the Ask Ama form
+  could not be verified.
+- The audit did not establish complete WCAG 2.2 conformance.
 
 Further testing with people who use assistive technologies would provide
 additional confidence.

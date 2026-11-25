@@ -110,8 +110,8 @@ In order, the problems to fix are: the WhatsApp button covering content, content
 - **Where:** "Enter your name" (Ask Ama), and "Full name" and "Phone Number" (Get In Touch).
 - **What happens:** the fields do not declare that they ask for a name and a phone number. Browsers have to guess. Both browsers I tested guessed correctly: Microsoft Edge on Windows and Chrome on a MacBook offered to fill in the name and phone number on Get In Touch. Assistive tools that help people fill in forms read the declared purpose, not a browser's guess, and other browsers may not guess.
 - **How to reproduce:**
-  1. Open DevTools, inspect the Full name field and look at its attributes.
-  2. There is `id`, `name`, `type` and `required`, but no `autocomplete`. The same is true of the Phone Number and Enter your name fields.
+    1. Open DevTools, inspect the Full name field and look at its attributes.
+    2. There is `id`, `name`, `type` and `required`, but no `autocomplete`. The same is true of the Phone Number and Enter your name fields.
 - **Evidence:** none of the three fields has an `autocomplete` attribute (`autocomplete="name"` and `autocomplete="tel"` are missing). In Edge and in Chrome on the MacBook, autofill still filled Full name and Phone Number on Get In Touch, most likely guessed from `name="fullName"` and `name="phone"`. The message field was not filled, which is expected: free text has no autofill value. I did not test Safari or Firefox.
 - **Principle and criterion:** Perceivable; 1.3.5 Identify Input Purpose (AA). The criterion asks for the purpose to be stated in the code so that browsers and assistive tools can rely on it, not guess it.
 - **Who it affects and how:** people with motor difficulties or tremors, people with memory or cognitive disabilities who find it hard to recall or type details, and older customers on small phone keyboards. Where the browser guesses correctly, as Edge and Chrome did, nothing is lost; where it does not, or where a tool relies on the declared purpose, they have to type every detail by hand.

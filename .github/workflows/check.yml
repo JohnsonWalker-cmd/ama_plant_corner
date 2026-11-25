@@ -1,0 +1,6 @@
+name: Check
+on: [push, pull_request]
+
+jobs:
+  hygiene:
+    uses: JohnsonWalker-cmd/.github/.github/workflows/hygiene.yml@main
