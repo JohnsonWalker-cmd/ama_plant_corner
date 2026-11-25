@@ -1,30 +1,25 @@
 /* Ama's Plant Corner - Website Styles */
 
 :root {
-  --font-heading: Georgia, serif;
-  --font-body: system-ui, Arial, sans-serif;
+  --font-heading: georgia, serif;
+  --font-body: system-ui, arial, sans-serif;
   --color-bg: #f6f1e7;
   --color-surface: #fffdf8;
-
   --color-text: #2b2a26;
   --color-text-muted: #5a5448;
   --color-text-on-primary: #fffdf8;
   --color-tint: #e4ebdd;
-
   --color-primary: #2f5d3a;
   --color-primary-hover: #24472c;
   --color-accent: #a64b2a;
   --color-accent-hover: #8a3d21;
   --color-focus: #a64b2a;
-
   --color-border: #d9d0bf;
   --color-border-strong: #8c7f6a;
-
   --text-base: 1rem;
   --text-lg: 1.25rem;
   --text-xl: 1.56rem;
   --text-2xl: 1.953rem;
-
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -35,23 +30,25 @@
   --spacing-8: 2rem;
   --spacing-12: 3rem;
   --spacing-16: 4rem;
-
   --leading-body: 1.5;
   --leading-heading: 1.2;
-
   --radius: 0.5rem;
   --content-width: 70rem;
 }
+
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 2px;
 }
+
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   color: var(--color-text);
   background: var(--color-bg);
@@ -60,6 +57,7 @@ body {
   margin: 0;
   line-height: var(--leading-body);
 }
+
 h1,
 h2,
 h3 {
@@ -67,25 +65,32 @@ h3 {
   line-height: var(--leading-heading);
   margin: 0 0 var(--spacing-3);
 }
+
 h1 {
   font-size: var(--text-2xl);
   overflow-wrap: anywhere;
 }
+
 h2 {
   font-size: var(--text-xl);
 }
+
 h3 {
   font-size: var(--text-lg);
 }
+
 p {
   margin: 0 0 var(--spacing-4);
 }
+
 a {
   color: var(--color-primary);
 }
+
 a:hover {
   color: var(--color-primary-hover);
 }
+
 img {
   max-width: 100%;
   display: block;
@@ -106,6 +111,7 @@ main {
   padding: var(--spacing-3) var(--spacing-4);
   border-bottom: 1px solid var(--color-border);
 }
+
 #logo {
   display: inline-block;
   text-decoration: none;
@@ -123,6 +129,7 @@ main {
   list-style: none;
   gap: 0 var(--spacing-5);
 }
+
 #nav a {
   display: inline-block;
   font-weight: 500;
@@ -130,20 +137,24 @@ main {
   text-decoration: none;
   padding: var(--spacing-3) 0;
 }
+
 #nav a:hover {
   text-decoration: underline;
   color: var(--color-primary);
 }
+
 #hero {
-  background: url(./assets/images/hero-banner.png) center/cover no-repeat;
+  background: url("./assets/images/hero-banner.png") center/cover no-repeat;
   min-height: 20rem;
   padding: var(--spacing-8) var(--spacing-5);
   border-radius: var(--radius);
 }
+
 #hero p {
   font-weight: 500;
   font-size: var(--text-lg);
 }
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -153,91 +164,112 @@ main {
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--radius);
 }
+
 .btn:hover {
   background: var(--color-accent-hover);
   color: var(--color-text-on-primary);
 }
+
 #find-us {
   background: var(--color-surface);
   padding: var(--spacing-5);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
+
 #find-us address {
   font-style: normal;
   margin-bottom: var(--spacing-3);
 }
+
 #find-us address a {
   display: inline-block;
   font-weight: 700;
   padding: var(--spacing-2) 0;
 }
+
 #find-us p:last-child {
   margin-bottom: 0;
 }
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
   gap: var(--spacing-4);
 }
+
 .product-item {
   background: var(--color-surface);
   padding: var(--spacing-3);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
+
 .product-item img {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3/2;
   background: var(--color-tint);
 }
+
 .product-item h3 {
   margin: var(--spacing-3) 0 var(--spacing-1);
 }
+
 .product-item p {
   margin: 0;
   color: var(--color-text-muted);
 }
+
 .guide-item {
   background: var(--color-surface);
   margin-bottom: var(--spacing-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
+
 .guide-trigger {
   cursor: pointer;
   padding: var(--spacing-4);
   font-weight: 700;
 }
+
 .guide-body {
   padding: 0 var(--spacing-4) var(--spacing-4);
 }
+
 .guide-trigger:hover {
   background: var(--color-tint);
 }
+
 .guide-body p {
   margin: 0 0 var(--spacing-3);
   line-height: 1.7;
 }
+
 .guide-body p:last-child {
   margin-bottom: 0;
 }
+
 .guide-body strong {
   color: var(--color-primary);
 }
+
 .form {
   display: grid;
   gap: var(--spacing-1);
   max-width: 32rem;
 }
+
 .form label {
   font-weight: 700;
   margin-top: var(--spacing-4);
 }
+
 .form label:first-child {
   margin-top: 0;
 }
+
 .form-field {
   width: 100%;
   font: inherit;
@@ -247,10 +279,12 @@ main {
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius);
 }
+
 textarea.form-field {
   min-height: 8rem;
   resize: vertical;
 }
+
 .form-submit {
   cursor: pointer;
   margin-top: var(--spacing-3);
@@ -262,6 +296,7 @@ textarea.form-field {
   border: 0;
   border-radius: var(--radius);
 }
+
 .form-submit:hover {
   background: var(--color-primary-hover);
 }
@@ -272,14 +307,17 @@ textarea.form-field {
   padding: var(--spacing-6) var(--spacing-4);
   text-align: center;
 }
+
 #footer p {
   margin: 0;
 }
+
 .two-col {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-12);
 }
+
 /* WhatsApp contact link */
 .whatsapp-button {
   display: inline-block;
@@ -291,7 +329,7 @@ textarea.form-field {
   text-decoration: none;
   font-weight: 600;
   font-size: var(--text-base);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -308,23 +346,26 @@ textarea.form-field {
   top: -100px;
   left: 10px;
   background: var(--color-primary);
-  color: #ffffff;
+  color: #fff;
   padding: 12px 16px;
   z-index: 1000;
   text-decoration: none;
   border-radius: var(--radius);
 }
+
 .skip-link:focus {
   top: 10px;
-  color: #ffffff;
+  color: #fff;
 }
-@media (min-width: 48rem) {
+
+@media (width >= 48rem) {
   #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: var(--spacing-8);
   }
+
   main {
     max-width: var(--content-width);
   }
@@ -332,19 +373,23 @@ textarea.form-field {
   #hero {
     padding: var(--spacing-16) var(--spacing-12);
   }
+
   #find-us {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-4) var(--spacing-8);
   }
+
   #find-us h2 {
     grid-column: 1/-1;
     margin: 0;
   }
+
   .products {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-6);
   }
+
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
