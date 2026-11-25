@@ -1,0 +1,33 @@
+{
+  "name": "amas-plant-corner",
+  "version": "1.0.0",
+  "description": "[Live site](https://johnsonwalker-cmd.github.io/ama_plant_corner/) ## Sketch  <img width=\"765\" height=\"1020\" alt=\"updated001\" src=\"https://github.com/user-attachments/assets/0ed14fb0-a0ce-4fb5-b4a2-eb7f1763b54f\" /> <img width=\"765\" height=\"1020\" alt=\"updated002\" src=\"https://github.com/user-attachments/assets/badd6dfc-1cc6-401e-83ab-c41f2938beed\" />",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnsonWalker-cmd/ama_plant_corner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JohnsonWalker-cmd/ama_plant_corner/issues"
+  },
+  "homepage": "https://github.com/JohnsonWalker-cmd/ama_plant_corner#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.2",
+    "prettier": "^3.10.1"
+  },
+  "lint-staged": {
+    "*.{html,css,js,json,yml}": "prettier --write"
+  }
+}
