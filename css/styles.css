@@ -135,9 +135,13 @@ main {
   color: var(--color-primary);
 }
 #hero {
-  background: var(--color-tint);
+  background: url(./assets/images/hero-banner.png) center/cover no-repeat;
+  min-height: 20rem;
   padding: var(--spacing-8) var(--spacing-5);
   border-radius: var(--radius);
+}
+#hero p {
+  font-weight: 500;
 }
 .btn {
   display: inline-block;
