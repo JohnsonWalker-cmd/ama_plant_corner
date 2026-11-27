@@ -4,7 +4,7 @@ A single-page website for Ama's Plant Corner, a neighbourhood plant shop at 14 O
 
 **Live site:** [johnsonwalker-cmd.github.io/ama_plant_corner](https://johnsonwalker-cmd.github.io/ama_plant_corner/)
 
-The page is one HTML file and one stylesheet. There is no build step and no JavaScript.
+The page is one HTML file, one stylesheet and one small script. There is no build step.
 
 ## The page
 
@@ -16,8 +16,8 @@ Sections, in the order a visitor meets them:
 4. **What We Sell** — houseplants, pots and planters, and soil and accessories, each with a photo and a starting price in cedis.
 5. **About Ama** — a short note on the shop.
 6. **Plant Care Tips** — guides for houseplants, succulents and cacti, tropical plants, and outdoor plants. Each guide opens and closes with `<details>`, so it works without a script.
-7. **Ask Ama** — a name and a plant question.
-8. **Get in Touch** — name, phone, and a message, plus a WhatsApp link with a prefilled note.
+7. **Ask Ama** — a name and a plant question, sent to Ama on WhatsApp.
+8. **Get in touch** — name, phone, and a message, sent to Ama on WhatsApp, plus a direct WhatsApp link.
 9. **Footer** — copyright.
 
 On a narrow screen the page is one column. From `48rem` the header spreads out, Find Us sits in three columns, the products sit in a row, and Plant Care and Ask Ama sit side by side.
@@ -27,10 +27,11 @@ On a narrow screen the page is one column. From `48rem` the header spreads out, 
 ```text
 index.html                 the page
 css/styles.css             layout, type, and colour
-css/assets/images/         houseplant, pots, and soil photos
+css/assets/images/         houseplant, pots, and soil photos (WebP, 720×480)
+js/forms.js                turns each form into a prefilled WhatsApp message
 docs/module-1/             Module 1 lab write-up
-docs/ee02/                 accessibility audits, testing logs, and write-up
-docs/ee03/                 version control and tooling write-up
+docs/ee02/                 accessibility audits, testing logs, write-up, and evidence screenshots
+docs/ee03/                 version control and tooling write-up and setup notes
 .github/workflows/         hygiene check on push and pull request
 .stylelintrc.json          Stylelint config for the CSS check
 ```
@@ -41,10 +42,12 @@ docs/ee03/                 version control and tooling write-up
 
 Open `index.html` in a browser. Nothing else is required to read the site.
 
-To install the commit hook:
+To install the commit hook and run the same checks as CI:
 
 ```bash
 npm install
+npm run format:check
+npm run lint
 ```
 
 ## Coursework
@@ -54,10 +57,10 @@ The Module 1 lab submission (sketch, diagnosis, and audit) used to be this file.
 Later write-ups:
 
 - [docs/ee02/write-up.md](docs/ee02/write-up.md) — accessibility fixes after the partner audit
-- [docs/ee03/EE03_Submission_Final.md](docs/ee03/EE03_Submission_Final.md) — version control and development tooling
+- [docs/ee03/ee03-submission.md](docs/ee03/ee03-submission.md) — version control and development tooling
 
 ## Limits
 
-- The Ask Ama and Get in Touch forms stay in the browser. They have no `action` and no script, so a submit does not reach Ama.
+- The forms don't store anything. Submitting opens WhatsApp with the message filled in, and the visitor presses send.
 - The phone number (`0244 000 000`) and the Facebook and Instagram links are placeholders.
 - About Ama has no photo.

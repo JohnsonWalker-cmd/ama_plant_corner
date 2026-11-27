@@ -9,13 +9,14 @@
     />
     <title>Ama's Plant Corner | Plant Shop In Accra</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/forms.js" defer></script>
   </head>
 
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
-    <header id="header">
-      <a id="logo" href="#hero">Ama's Plant Corner</a>
-      <nav id="nav">
+    <header class="site-header">
+      <a class="logo" href="#hero">Ama's Plant Corner</a>
+      <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#what-we-sell">What we sell</a></li>
           <li><a href="#plant-care">Plant care</a></li>
@@ -26,38 +27,38 @@
     </header>
 
     <main id="main">
-      <section id="hero">
+      <section id="hero" class="hero">
         <h1>Welcome to Ama's Plant Corner!</h1>
-        <p>Houseplants, pots and soil, with friendly advice on keeping them alive</p>
+        <p>Houseplants, pots and soil, with friendly advice on keeping them alive.</p>
         <a href="#what-we-sell" class="btn">See what we sell</a>
       </section>
-      <section id="find-us">
-        <h2>Find Us</h2>
+      <section id="find-us" class="find-us">
+        <h2>Find us</h2>
         <address>
           14 Okaishie Lane, Accra, Ghana<br />
           <a href="tel:+233244000000">Call 0244 000 000</a>
         </address>
-        <p>Open Monday to Saturday,8:00am to 6:00pm.Closed on Sundays.</p>
+        <p>Open Monday to Saturday, 8:00am to 6:00pm. Closed on Sundays.</p>
         <p>
-          Follow us:
+          Follow us on
           <a
             href="https://www.facebook.com/search/top?q=Ama%27s%20Plant%20Corner"
             target="_blank"
             rel="noopener noreferrer"
-            >Facebook</a
+            >Facebook<span class="visually-hidden"> (opens in a new tab)</span></a
           >
-          .
+          and
           <a
             href="https://www.instagram.com/explore/search/keyword/?q=Ama%27s%20Plant%20Corner"
             target="_blank"
             rel="noopener noreferrer"
-            >Instagram</a
-          >
+            >Instagram<span class="visually-hidden"> (opens in a new tab)</span></a
+          >.
         </p>
       </section>
 
       <section id="what-we-sell">
-        <h2>What We Sell</h2>
+        <h2>What we sell</h2>
         <p>
           We carry a wide variety of plants for your home and office. Whether you are a first-time
           plant owner or an experienced gardener, we have something for you. Come visit us in the
@@ -67,10 +68,10 @@
         <div class="products">
           <article class="product-item">
             <img
-              src="css/assets/images/houseplant.jpg"
+              src="css/assets/images/houseplant.webp"
               alt="Selection of houseplants"
-              width="180"
-              height="120"
+              width="720"
+              height="480"
               loading="lazy"
             />
             <h3>Houseplants</h3>
@@ -78,24 +79,24 @@
           </article>
           <article class="product-item">
             <img
-              src="css/assets/images/pots.jpg"
+              src="css/assets/images/pots.webp"
               alt="Pots and planters"
-              width="180"
-              height="120"
+              width="720"
+              height="480"
               loading="lazy"
             />
-            <h3>Pots &amp; Planters</h3>
+            <h3>Pots &amp; planters</h3>
             <p>Starting from GH&#8373; 15</p>
           </article>
           <article class="product-item">
             <img
-              src="css/assets/images/soil.jpg"
+              src="css/assets/images/soil.webp"
               alt="Soil and plant accessories"
-              width="180"
-              height="120"
+              width="720"
+              height="480"
               loading="lazy"
             />
-            <h3>Soil &amp; Accessories</h3>
+            <h3>Soil &amp; accessories</h3>
             <p>Starting from GH&#8373; 10</p>
           </article>
         </div>
@@ -110,8 +111,8 @@
       </section>
       <div class="two-col">
         <section id="plant-care">
-          <h2>Plant Care Tips</h2>
-          <p>Click on a topic below to read the care guide for that type of plant.</p>
+          <h2>Plant care tips</h2>
+          <p>Choose a type of plant below to read its care guide.</p>
 
           <div class="care-guides">
             <details class="guide-item">
@@ -134,7 +135,7 @@
             </details>
 
             <details class="guide-item">
-              <summary class="guide-trigger">Succulents &amp; Cacti</summary>
+              <summary class="guide-trigger">Succulents &amp; cacti</summary>
               <div class="guide-body">
                 <p>
                   <strong>Watering:</strong>
@@ -154,7 +155,7 @@
             </details>
 
             <details class="guide-item">
-              <summary class="guide-trigger">Tropical Plants</summary>
+              <summary class="guide-trigger">Tropical plants</summary>
               <div class="guide-body">
                 <p>
                   <strong>Watering and humidity:</strong>
@@ -173,7 +174,7 @@
             </details>
 
             <details class="guide-item">
-              <summary class="guide-trigger">Outdoor Plants</summary>
+              <summary class="guide-trigger">Outdoor plants</summary>
               <div class="guide-body">
                 <p>
                   <strong>Watering:</strong>
@@ -192,78 +193,84 @@
 
         <section id="ask-ama">
           <h2>Ask Ama</h2>
-          <p>Have a question about a plant? Call us on 0244 000 000, or ask Ama in the shop</p>
+          <p>Have a question about a plant? Call us on 0244 000 000, or ask Ama in the shop.</p>
 
-          <form class="form">
-            <label for="name">Enter your name: </label>
+          <form
+            class="form"
+            id="ask-form"
+            action="https://wa.me/233244000000"
+            method="get"
+            target="_blank"
+            data-whatsapp-intro="Hello Ama, I have a plant question."
+          >
+            <label for="name">Name</label>
             <input
               type="text"
-              placeholder="Your name"
               class="form-field"
               id="name"
               name="name"
               autocomplete="name"
               required
             />
-            <label for="question">Enter your question:</label>
+            <label for="question">Question</label>
             <textarea
-              placeholder="Your question"
+              placeholder="e.g. Why are my snake plant's leaves turning yellow?"
               class="form-field"
               id="question"
               name="question"
+              required
             ></textarea>
-            <button type="submit" class="form-submit">Submit</button>
+            <button type="submit" class="form-submit">Send question on WhatsApp</button>
           </form>
         </section>
       </div>
 
       <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>Leave your name, phone number and a message for Ama</p>
+        <h2>Get in touch</h2>
+        <p>Leave your name, phone number and a message for Ama.</p>
 
-        <form class="form">
-          <label for="fullName">Full name</label>
+        <form
+          class="form"
+          id="contact-form"
+          action="https://wa.me/233244000000"
+          method="get"
+          target="_blank"
+          data-whatsapp-intro="Hello Ama, I'm interested in your plants."
+        >
+          <label for="full-name">Full name</label>
           <input
             type="text"
-            placeholder="Full name"
             class="form-field"
-            id="fullName"
-            name="fullName"
+            id="full-name"
+            name="full-name"
             required
             autocomplete="name"
           />
-          <label for="phone">Phone Number:</label>
+          <label for="phone">Phone number</label>
           <input
             type="tel"
-            placeholder="Phone number"
+            placeholder="e.g. 024 123 4567"
             class="form-field"
             id="phone"
             name="phone"
             required
             autocomplete="tel"
           />
-          <label for="message">Your message:</label>
-          <textarea
-            placeholder="Your message"
-            class="form-field"
-            id="message"
-            name="message"
-            required
-          ></textarea>
-          <button type="submit" class="form-submit">Send Message</button>
+          <label for="message">Message</label>
+          <textarea class="form-field" id="message" name="message" required></textarea>
+          <button type="submit" class="form-submit">Send message on WhatsApp</button>
         </form>
-        <!-- WhatsApp contact link -->
         <a
           href="https://wa.me/233244000000?text=Hello%20Ama,%20I'm%20interested%20in%20your%20plants."
           class="whatsapp-button"
           target="_blank"
           rel="noopener noreferrer"
         >
-          WhatsApp Us
+          WhatsApp us<span class="visually-hidden"> (opens in a new tab)</span>
         </a>
       </section>
     </main>
-    <footer id="footer">
+    <footer class="site-footer">
       <p>Copyright &copy; 2026 Ama's Plant Corner. All rights reserved.</p>
     </footer>
   </body>
