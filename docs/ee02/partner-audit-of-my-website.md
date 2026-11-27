@@ -7,7 +7,7 @@
 
 ## How I tested
 
-- Automated tools: the WAVE extension for Chrome (0 errors, 1 contrast error, 0 alerts, AIM score 9.4 out of 10) and Lighthouse 13.4.1 in Chrome DevTools, mobile mode (score 96; two failed audits, one of which carries no weight in the score). I saved the full report as evidence/lighthouse-report.html. I also measured every text and background colour pair with the WebAIM Contrast Checker.
+- Automated tools: the WAVE extension for Chrome (0 errors, 1 contrast error, 0 alerts, AIM score 9.4 out of 10) and Lighthouse 13.4.1 in Chrome DevTools, mobile mode (score 96; two failed audits, one of which carries no weight in the score). The scores above are from the full Lighthouse report, which is kept outside the repository because it is generated output. I also measured every text and background colour pair with the WebAIM Contrast Checker.
 - Devices and browsers: Chrome on a MacBook, and Microsoft Edge on a Windows laptop (HP).
 - Keyboard: Microsoft Edge, without the trackpad. Journeys: find what Ama sells and the prices, open every care guide, send a question through Ask Ama, send a message through Get In Touch, reach WhatsApp and Call.
 - Zoom, text size and reflow: browser zoom at 200%, 400% and 500%; DevTools device toolbar at 320px and 375px (iPhone SE), including tap-target measurements in Edge on Windows; Chrome Settings → Appearance → Font size → Very large (24px); an iPhone 14 in Safari with larger text, where I also tapped Call and WhatsApp.
