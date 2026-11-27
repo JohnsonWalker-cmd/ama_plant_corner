@@ -32,9 +32,10 @@ docs/module-1/             Module 1 lab write-up
 docs/ee02/                 accessibility audits, testing logs, and write-up
 docs/ee03/                 version control and tooling write-up
 .github/workflows/         hygiene check on push and pull request
+stylelint.config.mjs       Stylelint config for the CSS check
 ```
 
-`package.json` is only for formatting. Prettier runs on commit through Husky and lint-staged, on HTML, CSS, JavaScript, JSON, and YAML. The GitHub Action in `.github/workflows/check.yml` calls the shared hygiene workflow.
+`package.json` holds the formatting and lint tools. Prettier runs on commit through Husky and lint-staged, on HTML, CSS, JavaScript, JSON, and YAML. The GitHub Action in `.github/workflows/check.yml` calls the shared hygiene workflow, which checks formatting and lints CSS with Stylelint.
 
 ## View it locally
 
