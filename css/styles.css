@@ -137,11 +137,6 @@ main {
   text-decoration: none;
   padding: var(--spacing-3) 0;
 }
-#find-us address a {
-  display: inline-block;
-  font-weight: 700;
-  padding: var(--spacing-2) 0;
-}
 
 #nav a:hover {
   text-decoration: underline;
@@ -309,9 +304,6 @@ textarea.form-field {
 
 #footer p {
   margin: 0;
-}
-#find-us p:last-child {
-  margin-bottom: 0;
 }
 
 .two-col {
